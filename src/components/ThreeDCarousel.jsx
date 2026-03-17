@@ -41,53 +41,52 @@ const ThreeDCarousel = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: 'top top',
-        end: '+=900%', // Optimized length: long enough for smooth spin, but ends right after reveal
+        end: '+=300%', // Even shorter for a punchy experience
         pin: true,
-        scrub: 4, 
+        scrub: 1.5, // Faster feedback
         anticipatePin: 1, 
       }
     });
 
     // 1. Spinning & Tilting Animation - Integrated Journey
     tl.to(carousel, {
-      rotationY: -720,  // Continuous spin throughout
+      rotationY: -720,  
       z: -1000,
-      duration: 1, 
+      duration: 0.8, // Completes the main spin faster
       ease: 'power1.inOut', 
     }, 0);
 
-    // Subtle tilt change during middle
+    // Subtle tilt change during start
     tl.to(carousel, {
       rotationX: -15,
       rotationZ: 8,
-      duration: 0.5,
+      duration: 0.3,
       ease: "sine.inOut"
-    }, 0.2);
+    }, 0.1);
 
-    // 2. Individual Card Dynamic Lighting
+    // 2. Individual Card Dynamic Lighting - Compressed into the first 30%
     cells.forEach((cell, i) => {
       const card = cell.querySelector('.card');
       tl.fromTo(card, 
         { filter: 'brightness(0.3) contrast(1.2) scale(0.9)' },
         { 
           filter: 'brightness(1.8) contrast(1) scale(1)',
-          duration: 0.12, 
+          duration: 0.1, 
           repeat: 1,
           yoyo: true,
           ease: "power2.inOut"
         }, 
-        (i / cellCount) * 0.65
+        (i / cellCount) * 0.25 // Fast lighting sequence
       );
     });
 
-    // 3. THE FINALE: Seamless Horizontal Tilt & Reveal
-    // Start tilting much earlier but slower to avoid jarring movement
+    // 3. THE FINALE: Starts almost immediately after the spin is established
     tl.to(carousel, {
         rotationX: -95, 
         z: -2000,
-        duration: 0.45,
+        duration: 0.4,
         ease: "power2.inOut"
-    }, 0.55); 
+    }, 0.25); // Trigger horizontal tilt much earlier to "crop" the middle
 
     tl.fromTo(finaleRef.current,
         { opacity: 0, scale: 1.2, y: 150, filter: 'blur(40px)' },
@@ -99,7 +98,7 @@ const ThreeDCarousel = () => {
           duration: 0.35, 
           ease: "power4.out" 
         },
-        0.65 // Reveal starts mid-tilt for a dynamic feel
+        0.4 // Reveal follows shortly after horizontal tilt begins
     );
 
 

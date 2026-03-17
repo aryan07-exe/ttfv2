@@ -5,7 +5,7 @@ const NextComponent = () => {
     return (
         <section className="next-component">
             <div className="content-wrapper">
-                <h2 className="section-title">Experience the Extraordinay</h2>
+                <h2 className="section-title">Experience the Extraordinary</h2>
                 <div className="services-grid">
                     <div className="service-card">
                         <span className="count">01</span>

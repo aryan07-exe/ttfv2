@@ -88,29 +88,29 @@
 }
 
 .logo-main {
-  font-family: 'Cinzel', serif;
-  font-size: 1.95rem; /* ~3% reduction from 2rem */
-  font-weight: 500;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
   text-transform: uppercase;
-  letter-spacing: 1.4rem;
-  color: rgba(255, 255, 255, 0.95);
-  margin-bottom: -1.2rem;
-  margin-left: 1.4rem;
+  letter-spacing: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: -0.5rem;
+  margin-left: 1.2rem;
   text-shadow: 0 5px 20px rgba(0,0,0,0.4);
 }
 
 .logo-accent {
-  font-family: 'Playfair Display', serif;
-  font-size: 7.75rem; /* ~3% reduction from 8rem */
-  font-weight: 600;
-  font-style: italic;
-  text-transform: capitalize;
-  background: linear-gradient(to bottom, #fff 60%, rgba(255,255,255,0.4) 100%);
+  font-family: 'Outfit', sans-serif;
+  font-size: 7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(to bottom, #fff 60%, rgba(255,255,255,0.7) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.5));
-  line-height: 0.85;
+  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.3));
+  line-height: 0.9;
+  letter-spacing: -0.02em;
 }
 
 .final-logo-subtitle {
@@ -190,6 +190,14 @@
   }
   
   .final-logo-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+  .logo-main {
+    font-size: 0.8rem;
+    letter-spacing: 0.6rem;
+    margin-left: 0.6rem;
+  }
+  .logo-accent {
+    font-size: 3.5rem;
   }
 }

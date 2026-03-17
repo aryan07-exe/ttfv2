@@ -15,16 +15,16 @@
 }
 
 .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 4rem;
-    font-weight: 300;
-    font-style: italic;
+    font-family: 'Outfit', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
     margin-bottom: 80px;
     text-align: center;
-    background: linear-gradient(to right, #fff, #666);
+    background: linear-gradient(to right, #fff, #888);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
 }
 
 .services-grid {
